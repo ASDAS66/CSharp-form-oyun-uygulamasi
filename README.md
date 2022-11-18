@@ -3,8 +3,8 @@ C# form ile Ödev olarak yaptığım uygulama; kullanıcı girişi, kayıt yenil
 Projemde olabildiğince çok tools kullanımına ve kodlarına yer vermeye çalıştım.
 ## 1.Form1
 Form1 uygulamsında, kullanıcı girişi ve kullanıcı kaydı yapılmaktadır.
-CodeFirst ile yaptığım uygulamada kullanıcı giriş yapmak için bu ekran kullnılmaktadır.
-Kyıtlı olan kullanıcı kullanıcı adını ve şifresini girmelidir.
+CodeFirst ile yaptığım uygulamada kullanıcı giriş yapmak için bu ekran kullanılmaktadır.
+Kayıtlı olan kullanıcı kullanıcı adını ve şifresini girmelidir.
 Şifre için eklenen textboxta şifre güvenliği için şifre karekterleri yerine * ekler.
 textboxların boş geçilmemesi için MessageBox eklenmiştir. boş geçilirse uyarı vermektedir.
 Kullanıcı giriş yaptığında bilgileri sorgulanır ve form2 ye geçiş yapar. form ikiye geçmek için kullanılan kod aşağıdaki gibidir.
