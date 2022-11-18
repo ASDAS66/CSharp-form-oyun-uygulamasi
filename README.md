@@ -18,66 +18,64 @@ if (dr.Read())
 uygulamanın form2 kısmında ise oyun başlamaktadır. kullanıcı bilgilerini doğru girerse bu ekrana gelmektedir. Burada işlem Oyun zorluk derecelerine göre işlem yeteneği sınanmaktadır. Kolay, Orta, Zor seçenekleri mevcuttur. Kolay seçeneğinde 0-50 arası, orta seçeneğinde 50-200 arası, zor seçeneğinde ise 200-1000 arası sayılarla işlem yapoşmaktadır. ve bütün bunları yapmak için belirli bir süre verilmiştir.
 #### FORM ARKA PLAN RENGİ DEĞİŞTİRME:
 “`
- this.BackColor = Color.SteelBlue;
-            this.Text = "**Sayıyı Bul**";
-            //form1 arka plan rengini düzenler
+this.BackColor = Color.SteelBlue;
+this.Text = "**Sayıyı Bul**";
+//form1 arka plan rengini düzenler
 “`
 #### lABELİN FONTUNU VE TEXTİNİ DÜZENLEME
 “`
 label4.Font = new Font("Georgia", 12, FontStyle.Italic);
-            label4.Text = "=";
+label4.Text = "=";
 “`
 #### BUTON AYARLARI
 “`
 button2.Text = "cevapla";
-            button2.Font = new Font("Georgia", 8, FontStyle.Bold);
-            button2.Enabled = false;
+button2.Font = new Font("Georgia", 8, FontStyle.Bold);
+button2.Enabled = false;
 “`
 #### LİSTBOX KULLANIMI
 “`
 listBox1.BackColor = Color.MediumPurple;
-            listBox1.Items.Add("mor");
-            listBox1.Items.Add("yeşil");
-            listBox1.Items.Add("pembe");
-            listBox1.Items.Add("sarı");
-            //listbox un arka plan rengini belirler ve indexlerini ekler.
+  listBox1.Items.Add("mor");
+  listBox1.Items.Add("yeşil");
+  listBox1.Items.Add("pembe");
+  listBox1.Items.Add("sarı");
+//listbox un arka plan rengini belirler ve indexlerini ekler.
 “`
 #### RASTGELE SAYI ÜRETME
 “`
  if (radioButton1.Checked == true)
-            {
-                sayi1 = rastgele.Next(0, 51);
-                sayi2 = rastgele.Next(0, 51);
-                //radiobutton1 seçildiğinde 1 ile 50 arasında rastgele sayı uretir.
-                label1.Text = sayi1.ToString();
-                label2.Text = sayi1.ToString();
-               //üretilen sayılar labellere yazılır.
-            }
+{              
+  sayi1 = rastgele.Next(0, 51);
+  sayi2 = rastgele.Next(0, 51);
+  //radiobutton1 seçildiğinde 1 ile 50 arasında rastgele sayı uretir.
+  label1.Text = sayi1.ToString();
+  label2.Text = sayi1.ToString();
+  //üretilen sayılar labellere yazılır.
+}
 “`
 #### OYUNDA TİMER KULLANIMI
 “`
  private void timer1_Tick(object sender, EventArgs e)
-        {
-            süre--;
-            label9.Text = süre.ToString();
-            //süreyi 1 er 1er azaltır ve label9 a yazdırır.
-            progressBar1.Value += 1;
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = 60;
-            progressBar1.Step = 5;
-            //progressaBarın min/max değerlerini belirler ve progressBarı 1er 1er arttırır.
-            
-            if (süre == 0)
+{
+  süre--;
+  label9.Text = süre.ToString();
+    //süreyi 1 er 1er azaltır ve label9 a yazdırır.
+    progressBar1.Value += 1;
+    progressBar1.Minimum = 0;
+    progressBar1.Maximum = 60;
+    progressBar1.Step = 5;
+    //progressaBarın min/max değerlerini belirler ve progressBarı 1er 1er arttırır.
+             if (süre == 0)
             {
-                button1.Enabled = false;
-                button2.Enabled = false;
-                timer1.Stop();
-                süre = 60;
-                button3.Visible = true;
-                //süre 0 olduğunda button1 ve button2 erişilmez olur timer durur.
+              button1.Enabled = false;
+              button2.Enabled = false;
+              timer1.Stop();
+              süre = 60;
+              button3.Visible = true;
+              //süre 0 olduğunda button1 ve button2 erişilmez olur timer durur.
             }
-           
-        }
+             }
 “`
 ## 3-Form3
 Bur forma, form1 ekranındaki kayıtol butonuna tıklayarak gelinmektedir. burada kullanıcı bilgileri alınarak kullanıcı veritabanına kayıt edilmektedir. Ve ayrıca kullanıcı hem kendi kaydını hem de oyundaki diğer kullanıcıları görmek adına kayıt görüntüle ekranından kullanıcıları görüntüleyebilir.
