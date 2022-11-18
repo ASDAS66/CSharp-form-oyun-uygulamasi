@@ -5,12 +5,16 @@ Form1 uygulamsında, kullanıcı girişi ve kullanıcı kaydı yapılmaktadır. 
 textboxların boş geçilmemesi için MessageBox eklenmiştir. boş geçilirse uyarı vermektedir.
 Kullanıcı giriş yaptığında bilgileri sorgulanır ve form2 ye geçiş yapar. form ikiye geçmek için kullanılan kod aşağıdaki gibidir.
 
-“`if (dr.Read())
+“`
+if (dr.Read())
 {
     Form2 frm = new Form2();
+    
     frm.ShowDialog();
+    
     //kullanici ve sifre doğruysa form2'ye geçer(giriş yapılır)
- }“`
+ }
+ “`
 
 ## 2.Form2
 uygulamanın form2 kısmında ise oyun başlamaktadır. kullanıcı bilgilerini doğru girerse bu ekrana gelmektedir. Burada işlem Oyun zorluk derecelerine göre işlem yeteneği sınanmaktadır. Kolay, Orta, Zor seçenekleri mevcuttur. Kolay seçeneğinde 0-50 arası, orta seçeneğinde 50-200 arası, zor seçeneğinde ise 200-1000 arası sayılarla işlem yapoşmaktadır. ve bütün bunları yapmak için belirli bir süre verilmiştir.
