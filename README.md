@@ -8,9 +8,9 @@ Kullanıcı giriş yaptığında bilgileri sorgulanır ve form2 ye geçiş yapar
 “`
 if (dr.Read())
 {
-  Form2 frm = new Form2();
-  frm.ShowDialog();
-  //kullanici ve sifre doğruysa form2'ye geçer(giriş yapılır)
+    Form2 frm = new Form2();
+    frm.ShowDialog();
+    //kullanici ve sifre doğruysa form2'ye geçer(giriş yapılır)
  }
 “`
 
